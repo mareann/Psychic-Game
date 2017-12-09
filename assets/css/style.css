@@ -1,0 +1,31 @@
+
+h1 {
+	padding-left: 2em;
+}
+
+ul {
+	list-style-type: none;
+}
+
+li {
+	width: 20em;
+	line-height: 2em;
+	font-weight: 700;
+	padding-left:2em;
+}
+
+#displayWins {
+	background-color: green;
+}
+
+#displayLoss {
+	background-color: red;
+}
+
+#displayGuessCount {
+	background-color: lightblue;
+}
+
+#displayGuess {
+	background-color: yellow;
+}

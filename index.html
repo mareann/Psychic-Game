@@ -3,6 +3,7 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Psychic Game</title>
+	<link rel="stylesheet" href="assets/css/style.css">
 	<script type="text/javascript" src="assets/javascript/game.js"></script>
 </head>
 
@@ -10,14 +11,14 @@
 	<div>
 		<h1>The Psychic Game</h1>
 		<p>
-			<strong>Guess what letter I am thinking of?</strong>
+		  <b>&ensp;&ensp;&ensp;&ensp;&ensp;Guess what letter I am thinking of?</b>
 		</p>
-		<p id="winsCountDisplay">
-			Wins: 0
-			<br/><br/>Loss: 0
-			<br/><br/>Guesses Left: 9
-			<br/><br/>Your Guesses so far: 
-		</p>
+		<ul id="winsCountDisplay"> 
+		    <li id="displayWins">Wins: 0</li>
+			<li id="displayLoss">Loss: 0</li>
+			<li id="displayGuessCount">Guesses Left: 9</li>
+			<li id="displayGuess">Your Guesses so far: </li>
+		</ul>
 	</div>
 </body>
 </html>

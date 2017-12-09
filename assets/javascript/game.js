@@ -8,9 +8,11 @@
     var guessesLeft = 9;
 
     function screenDisplayUpdate(w,l,g) {
-      	document.getElementById("winsCountDisplay").innerHTML = "Wins: " + w +
-      	"<br/><br/>Loss: " + l + "<br/><br/>Guesses Left: " + g + "<br/><br/>Your Guesses so far: " + userGuesses;
-    }
+      	document.getElementById("winsCountDisplay").innerHTML = 
+       "<li id='displayWins'>Wins: " + w + "</li>"+
+      "<li id='displayLoss'>Loss: " + l + "</li><li id='displayGuessCount'>Guesses Left: " + g + "</li>" +
+      "<li id='displayGuess'>Your Guesses so far: " + userGuesses + "</li>";
+   }
     // This function is run whenever the user presses a key.
     document.onkeyup = function(event) {
 
@@ -20,6 +22,7 @@
     // Randomly chooses a choice from the options array. This is the Computer's guess.
     var computerGuess = computerChoices[Math.floor(Math.random() * computerChoices.length)];
 
+      //PUT userGuess into array userGuesses
       userGuesses.push(userGuess);
 
       console.log("you guessed "+ userGuess + " " + userGuesses);
@@ -32,7 +35,9 @@
       	// refresh user screen counts
         guessesLeft = 9;
         userWins++;
+        userGuesses = []; //empty array
         screenDisplayUpdate(userWins,userLoss,guessesLeft);
+        console.log("YOU WIN");
       }
       else{
       	guessesLeft--;
@@ -46,7 +51,7 @@
       {
       	 userLoss++;
          guessesLeft = 9;
-         userGuesses = [];
+         userGuesses = []; //empty array
          screenDisplayUpdate(userWins,userLoss,guessesLeft);
       }
       console.log("================")
