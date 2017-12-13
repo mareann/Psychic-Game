@@ -22,19 +22,6 @@
     // Randomly chooses a choice from the options array. This is the Computer's guess.
     var computerGuess = computerChoices[Math.floor(Math.random() * computerChoices.length)];
 
-      // check if already guessed that letter
-      var userGuessDuplicate = 0;
-      for ( var i = 0; i < userGuesses.length; i++)
-      {
-        if ( userGuess === userGuesses[i])
-        {
-//          alert("you already guessed " + userGuess);
-          userGuessDuplicate = 1;
-        }
-      }
-
-      if ( userGuessDuplicate == 0)
-      {
       //PUT userGuess into array userGuesses
       userGuesses.push(userGuess);
 
@@ -68,12 +55,5 @@
          screenDisplayUpdate(userWins,userLoss,guessesLeft);
       }
       console.log("================")
-    } // end userGuessDuplicate
-    else
-    {
-
-      alert("Try again! You already guessed " + userGuess);
-
-    }
   }
   
